@@ -1,37 +1,39 @@
-�������ط�֧�������л��������ĸ÷�֧  git checkout -b <��֧��>
+创建本地分支并立即切换到创建的该分支  git checkout -b <分支名>
 
-���紴������master��֧��һ����֧ fz1 ,���л���fz1��֧ ��1.�л���master��֧ git branch master 2.git checkout -b  fz1  3.�鿴��ǰ�����ķ�֧ git branch    ,��ʾ��ǰ��֧Ϊ  fz1 ��֧��
+例如创建本地master分支的一个分支 fz1 ,并切换到fz1分支 ：1.切换到master分支 git branch master 2.git checkout -b  fz1  3.查看当前所处的分支 git branch    ,显示当前分支为  fz1 分支。
 
-�����ط�֧�ϴ���Զ��git ������
+将本地分支上传到远程git 服务器
 
-1.���û������Զ��git�ֿ��ַ������Ҫ����Զ�� git�ֿ� ��ַ git remote add origin <git�ֿ��ַ>
+1.如果没有设置远程git仓库地址，则需要设置远程 git仓库 地址 git remote add origin <git仓库地址>
 
-����origin Ϊ�ֿ��ַ������(��ʹ����������) ������origin ������ git �ֿ��ַ
+其中origin 为仓库地址的名称(可使用其他名称) ，引用origin 即代表 git 仓库地址
 
-2.�������´�����aa��֧�ϴ���Զ��git�ֿ⣺ git push -u origin  fz1   ��//�ϴ�����  fz1 ��֧��git������ ʹ��-u ��¼���ط�֧  fz1 ��Ӧ��Զ�̷�֧  ȷ���´��ύ  fz1 ��֧ʱ ��  fz1 ��֧��ֱ�� ʹ��git push 
+2.将本地新创建的aa分支上传至远程git仓库： git push -u origin  fz1   ，//上传本地  fz1 分支到git服务器 使用-u 记录本地分支  fz1 对应的远程分支  确保下次提交  fz1 分支时 在  fz1 分支上直接 使用git push 
 
-3.�ڱ���  fz1 ��֧�ڴ���һ�����ļ� ��1.txt;
+3.在本地  fz1 分支内创建一个新文件 如1.txt;
 
 4.git add 1.txt
 
-5.git commit -m"ע������"
+5.git commit -m"注释内容"
 
 6 git push 
 
 
 
-��Զ��git ��������֧��������������
+将远程git 服务器分支内容下拉到本地
 
-1.�ڱ��ش���һ��ͬ���ķ�֧ git checkout -b aa
+1.在本地创建一个同名的分支 git checkout -b aa
 
-2 ���������� git pull origin  aa
+2 下拉到本地 git pull origin  aa
 
-3 ���ش����ļ� text1.txt  ��commit
+3 本地创建文件 text1.txt  并commit
 
 4 git push --set-upstream origin aa
 
-�ٴδ����ļ�
+再次创建文件
 
-5.�ϴ���git ������  git push 
+5.上传到git 服务器  git push 
 
-���
+完毕
+
+1111
